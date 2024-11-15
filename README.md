@@ -9,53 +9,49 @@ Esta documentação descreve a arquitetura de solução desenvolvida para o Chat
 
 ## Componentes da Arquitetura
 
-1. **Interface de Usuário (Front-end)**:
-   - **WhatsApp**: Canal de comunicação para interações diretas com os usuários.
-   - **Widget no Site**: Ponto de acesso ao chatbot via site institucional.
+![image](https://github.com/user-attachments/assets/7b97feb2-c544-4795-ad49-edc70e85f1c0)
 
-2. **Motor de Processamento de Linguagem Natural (NLP)**:
-   - **Dialogflow**: Tecnologia responsável por interpretar as mensagens dos usuários e determinar as respostas adequadas com base na linguagem natural.
+**usuário**
 
-3. **Camada de Back-end**:
-   - **Python (Flask/Django)**: Gerenciamento da lógica de negócios, conectando os dados do usuário e os sistemas de apoio.
+   O usuário será o cliente que estará em constante interação com o sistema de chatbot da Dra.Jô
 
-4. **Banco de Dados**:
-   - **MySQL**: Armazenamento de histórico de interações, informações de clientes e dados analíticos.
+**ChatBot**
 
-5. **Infraestrutura**:
-   - **Google Cloud Platform**: Hospedagem escalável e segura para o back-end e o processamento do chatbot.
+   O chatbot será o responsável pelo front-end da interação com o usuário. Nele podemos realizar as perguntas e consultar todos os comandos propostos pela challenge
 
-6. **Integrações**:
-   - **API Gateway**: Facilita a comunicação entre o chatbot e sistemas de terceiros, como CRMs e ferramentas de análise.
+**Processamento de Linguagem Natural (NLP)**
 
-7. **Insights e Manutenção**:
-   - Monitora e melhora o aprendizado de máquina com base nas interações, garantindo a evolução contínua do chatbot.
+   Tecnologia responsável por interpretar as mensagens dos usuários e determinar as respostas adequadas com base na linguagem natural. utilizaremos o Dialogflow para interagir e interpretar os dados
 
-## Funções dos Componentes
+**Camada de Back-end**
 
-### Extraídas do PDF Enviado
-- **Usuário**: Interage diretamente com o chatbot.
-- **ChatBot Dra. Jô**: Central de processamento das solicitações do usuário.
-- **DialogFlow**: Faz o processamento da linguagem natural e conecta o front-end ao back-end.
-- **Cientista de Dados**: Realiza melhorias contínuas no aprendizado do chatbot, garantindo a acuracidade das respostas.
-- **Banco de Dados MySQL**: Armazena informações das interações, permitindo consultas e análise posterior.
-- **Infraestrutura Google Cloud**: Fornece um ambiente seguro e escalável para toda a solução.
+   Gerenciamento da lógica de negócios, conectando os dados do usuário e os sistemas de apoio. Será utilizado o código Python que pe amplamente utilizado para soluções de machine learning e integração com        vários modelos e tipos de APIs
+   
+**Infraestrutura**
 
-## Interações
+   Hospedagem escalável e segura para o back-end e o processamento do chatbot. Nele será utilizado o Google Cloud Platform, pois para a integração com o sistema Dialogflow contemplado para o processamento de     linguagem natural
+   
+**Banco de Dados**
 
-1. O usuário se comunica com o chatbot via WhatsApp ou site.
-2. O chatbot utiliza o Dialogflow para interpretar a mensagem e encaminhá-la para o back-end.
-3. O back-end processa a solicitação e consulta o banco de dados ou serviços externos via API Gateway.
-4. A resposta é retornada ao usuário por meio da interface de comunicação.
+   Armazenamento de histórico de interações, informações de clientes e dados analíticos. utilizaremos o MySQL para este tipo de interação.
 
-## Arquivos
+**Insights e Manutenção**
 
-- **Arquitetura_Chatbot_Dra_Jo.drawio**: Esquema inicial da arquitetura.
-- **Arquitetura_Chatbot_Dra_Jo_Interacoes.drawio**: Versão detalhada com as interações entre componentes.
+   Podemos extrair insights importantes dos resultados do processamento de linguagem natural que analisados de forma correta, por um cientista de dados, teremos constantemente manutenções e aprimoramentos do     próprio código afim de aumentar a imersão da experiencia do usuário com o chatbot
+
+## Previsão de custo Mensal
+
+![image](https://github.com/user-attachments/assets/bdfbfc4c-505b-417d-ab95-e2c1cc644fe3)
+
 
 ## Resultados Esperados
 
-- Redução do tempo de resposta para solicitações de clientes.
-- Atendimento escalável e eficiente.
-- Evolução contínua no aprendizado e na precisão do chatbot.
+**Redução significativa no tempo de resposta**: Automatizar o atendimento ao cliente permitirá respostas instantâneas, eliminando atrasos e melhorando a satisfação dos usuários ao atender demandas de forma ágil e precisa.
 
+**Atendimento escalável e eficiente**: O chatbot será capaz de gerenciar simultaneamente um grande volume de solicitações, mantendo a consistência na qualidade das respostas, independentemente da quantidade de usuários atendidos.
+
+**Evolução contínua no aprendizado e na precisão**: Com a implementação de técnicas de aprendizado de máquina, o chatbot será constantemente aprimorado. A análise das interações permitirá ajustes em tempo real para refinar respostas, reconhecer novas intenções e atender a demandas mais complexas.
+
+**Melhor experiência do usuário (UX)**: A interface intuitiva e as respostas personalizadas, baseadas no histórico e nas preferências dos usuários, proporcionarão interações mais satisfatórias, reforçando o relacionamento com a marca.
+
+**Geração de insights estratégicos**: A coleta de dados estruturados durante as interações permitirá análises mais detalhadas sobre o comportamento dos clientes, possibilitando decisões informadas e o desenvolvimento de novos serviços ou produtos.
